@@ -1,13 +1,17 @@
+import dataParaDate from "./dataParaDate";
+import moedaParaNumero from "./moedaParaNumero";
+
 function normalizarDados(dados: TransacoesBase) {
   return {
     nome: dados.Nome,
     email: dados.Email,
-    data: dados.Data,
+    data: dataParaDate(dados.Data),
     status: dados.Status,
     id: dados.ID,
-    cliente: dados["Cliente Novo"],
+    cliente: Boolean(dados["Cliente Novo"]),
     pagamento: dados["Forma de Pagamento"],
-    valor: dados["Valor (R$)"],
+    moeda: dados["Valor (R$)"],
+    valor: moedaParaNumero(dados["Valor (R$)"]),
   };
 }
 export default normalizarDados;
