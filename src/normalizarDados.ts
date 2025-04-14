@@ -1,7 +1,7 @@
 import dataParaDate from "./dataParaDate";
 import moedaParaNumero from "./moedaParaNumero";
 
-function normalizarDados(dados: TransacoesBase) {
+function normalizarDados(dados: TransacoesBase): Transacoes {
   return {
     nome: dados.Nome,
     email: dados.Email,

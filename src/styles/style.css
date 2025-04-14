@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.section-estatisticas {
+  & div {
+    margin-bottom: 0.5rem;
+  }
+}
+.section-estatisticas,
+.section-dados {
+  padding: 2rem;
+
+  & h2 {
+    padding-block: 1rem;
+  }
+}
+.table {
+  width: 100%;
+  max-width: 1180px;
+  table-layout: auto;
+  border-collapse: collapse;
+
+  & thead,
+  tbody {
+    & tr {
+      text-align: left;
+      & th,
+      td {
+        padding: 0.5rem;
+        border: 2px solid black;
+      }
+    }
+  }
+}
+#tbody {
+  & tr:nth-child(even) {
+    background-color: #f8f8ff;
+  }
+}

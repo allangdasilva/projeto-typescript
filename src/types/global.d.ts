@@ -14,3 +14,14 @@ interface TransacoesBase {
   ["Forma de Pagamento"]: typePagamento;
   ["Valor (R$)"]: string;
 }
+interface Transacoes {
+  nome: string;
+  email: string;
+  data: Date;
+  status: typeStatus;
+  id: number;
+  cliente: boolean;
+  pagamento: typePagamento;
+  valor: number | null;
+  moeda: string;
+}
